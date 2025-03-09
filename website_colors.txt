@@ -1,0 +1,11 @@
+#f62189 pink
+  #907783 soft shade
+
+
+#21f68e green
+  #464F46 soft shade
+
+
+#b8b3a8 soft beige? (next.js "Deploy now" button color)
+#1b1b1b dark grey bg
+#000000 black

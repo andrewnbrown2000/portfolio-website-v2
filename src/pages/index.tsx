@@ -2,51 +2,63 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NavButton } from "../components/NavButton";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
-    <div className="container mx-auto">
-      <div className="mx-0 my-0">
-        <div className="relative ml-4 2xl:mx-96">
-          <Image className="mt-6" src="/andrew_logo.png" alt="logo" width={100} height={100} />
-            <div className="absolute top-0 right-0 mr-4 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 lg:top-1/2 lg:right-1/2 lg:transform lg:translate-x-1/2 lg:-translate-y-1/2">
-            <NavButton selector=".about-me-section" text="About Me" 
-              className="bg-blue-600 text-white font-bold py-1 px-4 rounded
-              hover:bg-blue-700 sm:py-4 sm:px-8" />
-            <NavButton selector=".contact-me-section" text="Contact Me" 
-              className="bg-green-600 text-white font-bold py-1 px-4 rounded
-              hover:bg-green-700 sm:py-4 sm:px-8" />
-            <NavButton href="/projects" text="Projects" 
-              className="bg-red-600 text-white font-bold py-1 px-4 rounded 
-              hover:bg-red-700 sm:py-4 sm:px-8" />
-            </div>
+    <div className="container mx-auto max-w-screen-lg">
+      <div className="fixed top-0 left-4 lg:left-10 z-50 py-4">
+        <Image src="/andrew_logo.png" alt="Logo" width={100} height={100} />
+      </div>
+
+      {/* nav bar */}
+      <div>
+        <div className="flex justify-end m-4 lg:mt-7">
+          <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
+            <NavButton selector=".about-me-section" text="About"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+            <NavButton href="/projects" text="Projects"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+            <NavButton href="/resume" text="Resume"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+            <NavButton href="/blog" text="Blog (WIP)"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+          </div>
         </div>
-        <div className={`${geistSans.variable} ${geistMono.variable} min-h-screen p-8 pb-20`}>
-          <main className="flex flex-col items-center">
-            <div className="flex gap-4 items-center mt-8">
-              <a className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm h-10 px-4"
-                href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer">
-                Deploy now
-              </a>
-              <a className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm h-10 px-4"
-                href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer">
-                Read our docs
-              </a>
-            </div>
-          </main>
+      </div>
+
+      {/* profile pic and description */}
+      <div className="flex bg-dark justify-center items-center lg:min-h-[80vh] flex-col">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:grid-flow-col-dense gap-8">
+          <div className="rounded-full overflow-hidden w-64 h-64 mx-auto sm:ml-12 border-4 border-black sm:w-96 sm:h-96 lg:order-2">
+            <Image src="/nycskyline_pfp.jpg" alt="NYC Skyline" width={500} height={500} />
+          </div>
+          <div className="flex flex-col justify-center items-center lg:order-1">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl">Meet me: <span className="text-pink-500 font-bold">Andrew Brown</span></h1>
+            <p className="text-center max-w-xs italic pt-2 mx-2 sm:mx-0 lg:text-lg">cloud architect, developer, skateboarder, gamer, and occasional baker</p>
+          </div>
+        </div> {/* Closing the grid container */}
+        <div className="flex justify-center mt-4">
+          <div className="animate-bounce">
+            <svg className="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {/* about me section */}
+      <div className="about-me-section bg py-8 min-h-screen flex flex-col justify-center items-center">
+        <div className="max-w-4xl">
+          <h2 className="text-center text-2xl sm:text-6xl font-bold sm:mb-10">About Me</h2>
+          <p className="text-center max-w-4xl mx-auto p-4">&emsp;I grew up spending unhealthy amounts of time on the family computer, and each time
+            my mom and dad told me it was time for bed I stayed hoping they would forget. Although I am cursed with this
+            computer addiction, it also fuels my career drive and interests.</p>
+          <p className="text-center max-w-4xl mx-auto p-4">I graduated from Oklahoma State University in 2022 with a degree in Management Information Systems (MIS).
+            From there I moved to Plano, TX where I started my career in IT consulting. Disatisfied with my career growth -- wanting a challenge
+            and a change of scenery -- I relocated to NYC, where I am furthering my Cloud Architecture and Software Dev skills.
+          </p>
+          <p className="text-center max-w-4xl mx-auto p-4">I built this site as a sort of extension of my professional self.
+            Please browse my projects and feel free to reach out to connect for any reason!
+          </p>
         </div>
       </div>
     </div>
