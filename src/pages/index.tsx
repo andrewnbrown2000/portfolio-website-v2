@@ -1,18 +1,22 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import HomeButton from "../components/HomeButton";
+import { Roboto } from "next/font/google";
 import { NavButton } from "../components/NavButton";
+import ScrollArrow from '../components/ScrollArrow';
+
+const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
-    <div className="container mx-auto max-w-screen-lg">
+    <div className="container mx-auto max-w-screen-xl">
       <div className="fixed top-6 lg:top-2 left-4 lg:left-auto max-w-screen-lg">
-        <Image src="/andrew_logo.png" alt="Logo" width={100} height={100} />
+        <HomeButton />
       </div>
 
       <div className="h-screen">
         {/* nav bar */}
         <div>
-          <div className="flex justify-end m-4 lg:mt-7">
+          <div className="flex justify-end m-4 lg:mt-7 lg:mr-33">
             <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
               <NavButton selector=".about-me-section" text="About"
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
@@ -33,16 +37,12 @@ export default function Home() {
               <Image src="/nycskyline_pfp.jpg" alt="NYC Skyline" width={500} height={500} />
             </div>
             <div className="flex flex-col justify-center items-center lg:order-1">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl">Hello! I'm <span className="text-pink-500 font-bold">Andrew Brown</span></h1>
+                <h1 className="text-3xl sm:text-3xl lg:text-5xl text-center">Hello! I'm <span className="text-pink-500 font-bold">Andrew Brown</span></h1>
               <p className="text-center max-w-xs italic pt-2 mx-2 sm:mx-0 lg:text-lg">cloud architect, developer, skateboarder, gamer, and occasional baker</p>
             </div>
           </div> {/* Closing the grid container */}
 
-          <div className="animate-bounce mt-[20vh]">
-            <svg className="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </div>
+            <ScrollArrow />
         </div>
       </div>
 
