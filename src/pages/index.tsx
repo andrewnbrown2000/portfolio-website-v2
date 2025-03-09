@@ -5,39 +5,40 @@ import { NavButton } from "../components/NavButton";
 export default function Home() {
   return (
     <div className="container mx-auto max-w-screen-lg">
-      <div className="fixed top-0 left-4 lg:left-10 z-50 py-4">
+      <div className="fixed top-6 lg:top-2 left-4 lg:left-auto max-w-screen-lg">
         <Image src="/andrew_logo.png" alt="Logo" width={100} height={100} />
       </div>
 
-      {/* nav bar */}
-      <div>
-        <div className="flex justify-end m-4 lg:mt-7">
-          <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
-            <NavButton selector=".about-me-section" text="About"
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
-            <NavButton href="/projects" text="Projects"
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
-            <NavButton href="/resume" text="Resume"
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
-            <NavButton href="/blog" text="Blog (WIP)"
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+      <div className="h-screen">
+        {/* nav bar */}
+        <div>
+          <div className="flex justify-end m-4 lg:mt-7">
+            <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
+              <NavButton selector=".about-me-section" text="About"
+                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              <NavButton href="/projects" text="Projects"
+                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              <NavButton href="/resume" text="Resume"
+                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              <NavButton href="/blog" text="Blog (WIP)"
+                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* profile pic and description */}
-      <div className="flex bg-dark justify-center items-center lg:min-h-[80vh] flex-col">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:grid-flow-col-dense gap-8">
-          <div className="rounded-full overflow-hidden w-64 h-64 mx-auto sm:ml-12 border-4 border-black sm:w-96 sm:h-96 lg:order-2">
-            <Image src="/nycskyline_pfp.jpg" alt="NYC Skyline" width={500} height={500} />
-          </div>
-          <div className="flex flex-col justify-center items-center lg:order-1">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl">Meet me: <span className="text-pink-500 font-bold">Andrew Brown</span></h1>
-            <p className="text-center max-w-xs italic pt-2 mx-2 sm:mx-0 lg:text-lg">cloud architect, developer, skateboarder, gamer, and occasional baker</p>
-          </div>
-        </div> {/* Closing the grid container */}
-        <div className="flex justify-center mt-4">
-          <div className="animate-bounce">
+        {/* profile pic and description */}
+        <div className="flex bg-dark justify-center items-center flex-col mt-10 lg:mt-40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:grid-flow-col-dense gap-8">
+            <div className="rounded-full overflow-hidden w-64 h-64 mx-auto sm:ml-12 border-4 border-black sm:w-96 sm:h-96 lg:order-2">
+              <Image src="/nycskyline_pfp.jpg" alt="NYC Skyline" width={500} height={500} />
+            </div>
+            <div className="flex flex-col justify-center items-center lg:order-1">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl">Hello! I'm <span className="text-pink-500 font-bold">Andrew Brown</span></h1>
+              <p className="text-center max-w-xs italic pt-2 mx-2 sm:mx-0 lg:text-lg">cloud architect, developer, skateboarder, gamer, and occasional baker</p>
+            </div>
+          </div> {/* Closing the grid container */}
+
+          <div className="animate-bounce mt-[20vh]">
             <svg className="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
             </svg>
