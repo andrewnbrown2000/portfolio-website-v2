@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const ScrollArrow: React.FC = () => {
+interface ScrollArrowProps {
+    className?: string;
+}
+
+const ScrollArrow: React.FC<ScrollArrowProps> = ({ className }) => {
     const [opacity, setOpacity] = useState(1);
 
     const handleScroll = () => {
@@ -21,7 +25,7 @@ const ScrollArrow: React.FC = () => {
 
     return (
         <div
-            className="animate-bounce mt-[20vh]"
+            className={`${className}`}
             id="scroll-arrow"
             style={{ opacity }}
         >
