@@ -1,9 +1,20 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import HomeButton from "../components/HomeButton";
 import { NavButton } from "../components/NavButton";
 import ScrollArrow from '../components/ScrollArrow';
 
 export default function Home() {
+
+  // dissable horizontal scroll
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
+
   return (
     // home button
     <div className="container mx-auto max-w-screen-lg">
@@ -12,21 +23,21 @@ export default function Home() {
       </div>
 
       <div className="h-screen">
-        {/* nav bar */}
         <div>
           <div className="flex justify-end m-4 lg:mt-7 lg:mr-33">
             <div className="flex flex-col space-y-2 lg:flex-row lg:space-y-0 lg:space-x-2">
               <NavButton selector=".about-me" text="About"
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
               <NavButton href="/projects" text="Projects"
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
-              <NavButton href="/resume" text="Resume"
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" target="_blank" rel="noopener noreferrer" />
+              <NavButton href="https://misc-publiclyaccessible-things.s3.us-east-1.amazonaws.com/andrewbrown_resume_mar2025.pdf" text="Resume" target="_blank" rel="noopener noreferrer"
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
               <NavButton href="/blog" text="Blog (WIP)"
-                className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
+              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" target="_blank" rel="noopener noreferrer" />
             </div>
           </div>
         </div>
+        {/* end nav bar */}
 
         {/* profile pic and description */}
         <div className="flex max-h- justify-center items-center flex-col mt-6 lg:mt-40">
@@ -46,7 +57,7 @@ export default function Home() {
 
       <div>
         {/* about me section */}
-        <div className="about-me md:mb-[30vh] flex flex-col items-center">
+        <div className="about-me mb-[15vh] md:mb-[30vh] flex flex-col items-center">
           <div className="max-w-4xl">
             <h2 className="text-center text-2xl sm:text-6xl font-bold sm:mb-10">About Me</h2>
             <p className="text-center max-w-4xl mx-auto p-4">&emsp;I grew up staying up way too late playing video games on the
