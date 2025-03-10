@@ -2,9 +2,14 @@ import React from 'react';
 import { useRouter } from 'next/router';
 
 const HomeButton: React.FC = () => {
-    
+    const router = useRouter();
+
     const handleClick = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (router.pathname !== '/') {
+            router.push('/');
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     };
 
     return (
