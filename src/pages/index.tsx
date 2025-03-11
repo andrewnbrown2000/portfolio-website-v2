@@ -40,7 +40,7 @@ export default function Home() {
         {/* end nav bar */}
 
         {/* profile pic and description */}
-        <div className="flex max-h- justify-center items-center flex-col mt-6 lg:mt-40">
+        <div className="flex max-h- justify-center items-center flex-col lg:mt-40">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 lg:grid-flow-col-dense gap-8">
             <div className="rounded-full overflow-hidden w-64 h-64 mx-auto sm:ml-12 border-4 border-black sm:w-96 sm:h-96 lg:order-2">
               <Image src="/nycskyline_pfp.jpg" alt="NYC Skyline" width={500} height={500} />
@@ -57,21 +57,17 @@ export default function Home() {
 
       <div>
         {/* about me section */}
-        <div className="about-me mb-[15vh] md:mb-[30vh] flex flex-col items-center">
+        <div className="about-me md:mb-[30vh] flex flex-col items-center">
           <div className="max-w-4xl">
             <h2 className="text-center text-2xl sm:text-6xl font-bold sm:mb-10">About Me</h2>
-            <p className="text-center max-w-4xl mx-auto p-4">&emsp;I grew up staying up way too late playing video games on the
-              family computer, which led me to study <span className="text-pink-500">MIS</span> at <span className="text-pink-500">Oklahoma State University</span> and
-              start my career in <span className="text-pink-500">IT Consulting</span>. After starting my career in
-              IT consulting in Plano, I discovered cloud computing and eventually made the leap to <span className="text-pink-500">NYC</span> to expand my opportunities.
-              In my free time, I build personal projects—mostly in the cloud. Check out the projects section to see what I've been working on!</p>
+            <p className="text-center max-w-4xl mx-auto p-4">&emsp;Growing up, I spent countless late nights on the family computer, which fueled a lifelong obsession with technology and led me to study <span className='text-pink-500'>MIS</span> at <span className='text-pink-500'>Oklahoma State University</span>. That passion launched my career in <span className='text-pink-500'>IT Consulting</span>, where I discovered cloud computing and eventually made the leap to <span className='text-pink-500'>NYC</span> to expand my opportunities. In my free time, I build personal projects—mostly in the cloud. Check out the projects section to see what I've been working on!</p>
             <p className="text-center max-w-4xl mx-auto p-4">I built this site as an opportunity to
               learn Next.js and AWS static website hosting, and to showcase my projects. Please reach out to me for any reason, my contacts are below!</p>
           </div>
         </div>
 
         {/* contact me section */}
-        <div className="w-screen absolute left-0 py-8 flex flex-col justify-center items-center bg-[#313131]">
+        <div className="w-screen absolute left-0 py-3 flex flex-col justify-center items-center bg-[#313131]">
           <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-3">
             <div className="text-center">
               <p className="font-bold">My LinkedIn:</p>
