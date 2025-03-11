@@ -57,7 +57,7 @@ export default function Home() {
 
       <div>
         {/* about me section */}
-        <div className="about-me md:mb-[30vh] flex flex-col items-center">
+        <div className="about-me mb-10 md:mb-[30vh] flex flex-col items-center">
           <div className="max-w-4xl">
             <h2 className="text-center text-2xl sm:text-6xl font-bold sm:mb-10">About Me</h2>
             <p className="text-center max-w-4xl mx-auto p-4">&emsp;Growing up, I spent countless late nights on the family computer, which fueled a lifelong obsession with technology and led me to study <span className='text-pink-500'>MIS</span> at <span className='text-pink-500'>Oklahoma State University</span>. That passion launched my career in <span className='text-pink-500'>IT Consulting</span>, where I discovered cloud computing and eventually made the leap to <span className='text-pink-500'>NYC</span> to expand my opportunities. In my free time, I build personal projects—mostly in the cloud. Check out the projects section to see what I've been working on!</p>
