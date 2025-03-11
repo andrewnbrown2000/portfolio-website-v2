@@ -1,6 +1,5 @@
 import HomeButton from "../components/HomeButton";
 import { NavButton } from "../components/NavButton";
-import { useEffect } from "react";
 
 export default function Projects() {
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const HomeButton: React.FC = () => {
     const router = useRouter();
@@ -14,7 +15,7 @@ const HomeButton: React.FC = () => {
 
     return (
         <button className="home-button cursor-pointer" onClick={handleClick}>
-            <img src="/andrew_logo.png" alt="Home" width={100} height={100} />
+            <Image src="/andrew_logo.png" alt="Home" width={100} height={100} />
         </button>
     );
 };
