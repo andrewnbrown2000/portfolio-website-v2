@@ -30,7 +30,7 @@ export default function Home() {
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
               <NavButton href="/projects" text="Projects"
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" target="_blank" rel="noopener noreferrer" />
-              <NavButton href="https://misc-publiclyaccessible-things.s3.us-east-1.amazonaws.com/andrewbrown_resume_mar2025.pdf" text="Resume" target="_blank" rel="noopener noreferrer"
+              <NavButton href="https://misc-publiclyaccessible-things.s3.us-east-1.amazonaws.com/andrewbrown_resume_mar2025.docx" text="Resume" target="_blank" rel="noopener noreferrer"
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" />
               <NavButton href="/blog" text="Blog (WIP)"
                 className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base font-bold w-24 h-10 sm:w-30 sm:h-12" target="_blank" rel="noopener noreferrer" />
